@@ -1,0 +1,38 @@
+{% if view == 'show' %}
+    {% if value|length > 0 %}
+        <div class="embedded-list">
+         <table class="table datagrid" style="text-align: center"><thead><tr><th>{{ 'id' |trans }}</th><th>{{ 'value' |trans }}</th><th>{{ 'currency' |trans }}</th><th>{{ 'offer' |trans }}</th><th>{{ 'vat' |trans }}</th><th>{{ 'quantity' |trans }}</th><th>{{ 'list' |trans }}</th></tr></thead><tbody>
+            {% for element in value %}
+                
+                    <tr><td>
+                          {{ element.id }}
+                        </td>
+                        <td>
+                            {{ element.value }}
+                        </td>
+                        <td>
+                            {{ element.currency }}
+                        </td>
+                        <td>
+                            {{ element.offer }}
+                        </td>
+                        <td>
+                            {{ element.vat }}
+                        </td>
+                        <td>
+                            {{ element.quantity }}
+                        </td>
+                        <td>
+                            {{ element.list }}
+                        </td>
+                </tr>
+            {% endfor %}
+             </tbody>
+            </table>
+        </div>
+    {% else %}
+        <div class="empty collection-empty">
+            {{ include(entity_config.templates.label_empty) }}
+        </div>
+    {% endif %}
+{% endif %}

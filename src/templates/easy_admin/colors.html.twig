@@ -1,0 +1,7 @@
+<ul>
+    {% for option in value|keys %}
+        <li>
+            {{ option |trans }} <span class="circle" style="color: {{value[option]}}">{{value[option]}}</span>
+        </li>
+    {% endfor %}
+</ul>

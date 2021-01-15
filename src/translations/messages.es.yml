@@ -1,0 +1,315 @@
+#Actions labels
+actions.edit: Editar
+actions.show: Ver
+actions.delete: Eliminar
+actions.new: Añadir
+actions.search: Buscar
+actions.exit: Salir
+actions.cancel: Cancelar
+actions.invoice: Generar Factura
+actions.quote: Generar Albarán
+
+#Standar fields labels
+id: Id
+name: Nombre
+type: Tipo
+types: Tipos
+user: Usuario
+customer: Cliente
+video: Vídeo
+audio: Audio
+title: Título
+image: Imagen
+description: Descripción
+link: Enlace 
+username: Usuario
+surnames: Apellidos
+email: Correo
+lastLogin: Último inicio de sesión
+createdDate: Fecha de creación
+updatedDate: Última actualización
+roles: Permisos
+enabled: Activado
+disabled: Desactivado
+profile: Perfil
+telephone: Telefono
+cellphone: Móvil
+address: Dirección
+birthdate: Aniversario 
+nationality: Nacionalidad
+age: Edad
+nif: DNI
+system: Sistema
+price: Precio
+status: Estado
+amount: Importe
+percent: Porcentage
+absolute: Absoluto
+value: Valor
+active: Activo
+code: Código
+devices: Dispositivos
+device: Dispositivo
+postalCode: Código Postal
+state: Comunidad Autónoma
+province: Provincia
+iso: Iso
+zip: Código Postal
+latitude: Latitud
+longitude: Longitud
+number: Número
+country: País
+civilStatus: Estado Civil
+phone: Teléfono
+birthDate: Fecha de nacimiento
+city: Ciudad
+street: Calle
+model: Modelo
+platform: Plataforma
+manufacturer: Fabricante
+lang: Idioma
+version: Versión
+sort: Orden
+products: Productos
+categories: Categorias
+translatables: Campos traducibles
+attributes: Atributos
+attribute: Atributo
+category.parent: Categoria padre
+category.childs: SubCategorias
+product: Producto
+welcome: ¡Bienvenido!
+welcome_var: ¡Bienvenido %name%!
+attribute.options: Valores
+attributeValue: Valor atributo
+prices: Precios
+pricelist: Listado de precios
+startDate: Fecha de inicio
+endDate: Fecha de fin
+main: Principal
+show_main: Mostrar en el inicio
+campaigns: Campañas
+campaign: Campaña
+vat: IVA
+gallery: Galeria
+base: Base
+color: Color
+text: Texto
+Browse: Examinar
+rankingAlias: Nombre ranking
+discount: Descuento
+quantity: Cantidad
+paymentMethod: Método de pago
+shippingMethod: Metodo de envío
+shippings: Envíos
+weight: Peso
+currency: Moneda
+offer: Oferta
+list: Lista
+listName: Nombre de la lista
+saveUp: Ahorrado
+total: Total
+account: Cuenta Bancaria
+order: Pedido
+shows_on: Mostrar en
+cart: Carrito
+filter: Filtros
+default_selected: Seleccionado por defecto
+shippingZones: Zonas de envios
+billingAddress: Dirección de facturación
+savedAddress: Direcciones guardadas
+blatters: Blatters
+blatters_prod: Productos Blatters
+saved: Ahorrado
+stores: Tiendas
+sales: Ventas
+class: Clase
+web: Página web
+admin_dashboard: Panel de administración
+app: Aplicación
+url: Url
+shop.pick: Recogida en tienda
+place_google: Google Place
+notify: Notificar
+position: Posición
+profilePhoto: Foto de perfil
+paginator.previous: Página anterior
+paginator.next: Página siguiente
+orders: Pedidos
+users: Usuarios
+config: Configuración
+phone_abbr: Tel.
+send: Enviar
+select_file: Selecciona el archivo
+importer: Importador
+principal: Principal
+invoices: Facturas
+dump: Mostrar
+importer.force: Eliminar elementos anteriores
+shops: Tiendas
+feature: Caracteristicas
+password: Contraseña
+notifications: Notificaciones
+totalOrders: Número de pedidos
+sumSales: Suma de ventas
+pickAll: Elegir todos
+mail: Correo
+mails: Correos
+topics: Temas
+params: Parámetros
+push: Push
+entity: Entidad
+newsletter: Newsletter
+offers: Ofertas
+business: Comercio
+minPrice: Precio Mínimo
+maxPrice: Precio Máximo
+uses: Usos
+maxUses: Máximos usos
+
+#helps
+multiple_help: Para seleccionar varios manten pulsado control
+
+#mime types help
+image.formats: 'Formatos soportados: jpg jpeg png'
+video.formats: 'Formatos soportados: mp4 mov avi'
+audio.formats: 'Formatos soportados: mp4 audio mp3'
+
+wrong.type: Formato incorrecto
+
+#Menu Labels
+menu.user: Usuario
+menu.users: Usuarios
+menu.device: Dispositivo
+menu.devices: Dispositivos
+menu.categories: Categorias
+menu.category: Categoria
+menu.products: Productos
+menu.product: Producto
+menu.product_complete: Productos
+menu.catalog: Catálogo
+menu.attributes: Atributos
+menu.attribute: Atributo
+menu.attributeValues: Attr. Valores
+menu.attributeValue: Attr. Valor
+menu.price: Precio
+menu.prices: Precios
+menu.pricelist: Lista de precios
+menu.paymentMethods: Metodos de pago
+menu.paymentMethod: Metodo de pago
+menu.shippingMethods: Metodos de envío
+menu.shippingMethod: Metodo de envío
+menu.soldProducts: Productos vendidos
+menu.soldProductsAttributes: Atributos de los productos vendidos
+menu.campaigns: Campañas
+menu.campaign: Campaña
+menu.offer: Oferta
+menu.offers: Ofertas
+menu.orders: Pedidos
+menu.business: Comercio
+menu.soldPrice: Precio de la venta
+menu.zone: Zona
+menu.zones: Zonas
+menu.shippingZone: Zona de envíos  
+menu.shippingZones: Zonas de envíos 
+menu.blatters: Movimientos Blatters
+menu.orderstatus: Estado del pedido
+menu.suppliers: Suministradores
+menu.supplier: Suministrador
+menu.subproduct: Producto segmentado
+menu.blatters_prod: Productos Blatters
+menu.notifications: Notificaciones
+menu.notification: Notificación
+menu.template: Plantilla
+menu.templates: Plantillas
+menu.content: Contenido
+menu.tag: Etiqueta
+menu.tags: Etiquetas
+menu.cms: CMS
+menu.cmsCategory: Categoria CMS
+menu.cmsCategories: Categorias CMS
+menu.menu: Menú
+menu.menus: Menús
+menu.menuEntry: Entrada Menu
+menu.menuEntries: Entradas Menu
+menu.group: Grupo
+menu.groups: Grupos
+menu.coupon: Cupón
+menu.coupons: Cupónes
+menu.objective: Objetivo
+menu.objectives: Objetivos
+menu.bussines: Negocio
+menu.rate: Planes
+
+
+
+api-platform: Api Platform
+# ROLES
+ROLE_USER: Usuario
+ROLE_SUPER_ADMIN: Super Administrador
+ROLE_ADMIN: Administrador
+ROLE_OPERATOR: Operador
+
+password_resset: ¡Contraseña restablecida!
+
+hi_var: "Hola %name%."
+resetting.email.data: "Te enviamos este mensaje para que puedas modificar tu contraseña. Si no has sido tu, ignora este correo."
+url_no_works: "Si no puedes abrir la página desde el botón, copia y pega el siguiente enlace en tu navegador"
+reset_password: "Cambiar contraseña"
+account_config: "Configuración de tu cuenta"
+
+notification.welcome.title: "Bienvenido "
+notification.welcome.description: "Has iniciado sesión en la versión de prueba. \n Ten en cuenta que pueden haber errores y algunos elementos pueden no estar terminados."
+default.register.title: "Bienvenido"
+default.register.description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus commodo condimentum varius. Aliquam posuere nunc ut erat condimentum, vel auctor felis facilisis. "
+
+
+# Status types
+prepare: No Confirmado
+confirm: Confirmado
+complete: Completado
+canceled: Cancelado
+
+#Stats
+most_sold_products: Productos más vendidos
+sales_per_store: Ventas por tienda
+users_per_age: Usuarios por edad
+customer_types: Tipos de clientes
+most_sold_categories: Categorías más vendidas
+phone_model: Modelo de movil
+see_more: Ver más
+position_table: Tabla de posiciones
+not_defined: No defenido
+
+order_status-prepare-name: "Procesando"
+order_status-confirm-name: "Confirmado"
+order_status-complete-name: "Completado"
+order_status-canceled-name: "Cancelado"
+order.record: "Historial de estados"
+
+#cms 
+
+
+#footer
+download_app: "Descarga la app:"
+follow-us: "Siguenos en:"
+contact: "Contacto"
+
+#App
+version_download: Descargar app android Beta
+version_description: "Si ya formas parte del grupo beta, ya puedes decargarla en tu dispositivo."
+download_from: Descarga desde
+
+
+#InvoiceTypes
+CustomerInvoice: Factura Cliente
+CustomerQuote: Albarán Cliente
+
+locale: 'es'
+locale_label: 'Idioma'
+chose_one: "Elige el idioma"
+
+#PriceList
+priceList.pvp.name: "PVP"
+priceList.pvp.title: "Precio de venta al publico"
+priceList.pvp.description: ""

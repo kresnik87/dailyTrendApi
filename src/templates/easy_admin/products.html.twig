@@ -1,0 +1,26 @@
+{% if view == 'show' %}
+    {% if value|length > 0 %}
+        <table border="1" style="width: 100%;text-align: center"><tr><th>Id Producto</th><th>Nombre</th><th>Precio €</th><th>Cantidad</th></tr>
+            {% for element in value %}
+                
+                    <tr><td>
+                          {{ element.id }}
+                        </td>
+                        <td>
+                            {{ element.name }}
+                        </td>
+                        <td>
+                            {{ element.price }}
+                        </td>
+                        <td>
+                            {{ element.quantity }}
+                        </td>
+                </tr>
+            {% endfor %}
+            </table>
+    {% else %}
+        <div class="empty collection-empty">
+            {{ include(entity_config.templates.label_empty) }}
+        </div>
+    {% endif %}
+{% endif %}

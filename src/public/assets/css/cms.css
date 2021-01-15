@@ -1,0 +1,121 @@
+a {
+  color: var(--color-secondary); }
+
+.main-header {
+  height: 14vh;
+  background-color: var(--color-secondary); }
+  .main-header #header-logo {
+    height: 100%; }
+    .main-header #header-logo .logo {
+      color: var(--color-primary); }
+      .main-header #header-logo .logo .header-logo-image {
+        height: 100%;
+        width: auto; }
+  .main-header .main-menu ul {
+    list-style-type: none; }
+    .main-header .main-menu ul li a {
+      color: var(--color-primary);
+      font-weight: bold; }
+  .main-header .navbar-custom-menu {
+    display: flex;
+    align-items: center;
+    padding: 1rem; }
+.main-footer {
+  min-height: 28vh;
+  background-color: var(--color-secondary);
+  display: flex;
+  justify-content: space-between;
+  grid-area: footer; }
+
+body {
+  background-color: transparent;
+  color: var(--color-secondary); }
+  body.cms .wrapper {
+    width: 100%;
+    margin: 0 auto;
+    grid-column-gap: 0;
+    grid-template-columns: 0 auto; }
+    body.cms .wrapper .content-wrapper {
+      grid-template-columns: auto;
+      min-height: calc(100vh - (29vh +  15vh)); }
+  body.cms.easyadmin-sidebar-none .wrapper {
+    grid-template-areas: "header header" "sidebar content-wrapper" "footer footer";
+    grid-template-columns: 0 auto;
+    grid-row-gap: 1vh; }
+
+.content {
+  background: transparent;
+  box-shadow: none;
+  border-radius: none; }
+  .content-header {
+    border-bottom: none; }
+    .content-header-title {
+      margin: 2rem auto;
+      text-align: center; }
+      .content-header-title .title {
+        color: var(--color-primary);
+        font-size: 3rem;
+        font-family: 'FredokaOne';
+        letter-spacing: .15rem;
+        line-height: 3rem;
+        letter-spacing: .15rem; }
+  .content-body {
+    width: 95%;
+    margin: 5rem auto; }
+  .content-footer {
+    border-top: none; }
+
+.footer {
+  justify-content: center;
+  width: 100%;
+  padding: 2rem 5vw; }
+  .footer__item {
+    vertical-align: top;
+    margin: 0 1vw;
+    text-align: center; }
+    .footer__item .btn {
+      margin: .5rem 0;
+      height: 3rem;
+      width: 100%; }
+      .footer__item .btn .text {
+        display: inline-block;
+        width: calc(100% - 2rem);
+        font-size: 1.4rem;
+        vertical-align: middle; }
+      .footer__item .btn img {
+        width: 2rem;
+        vertical-align: middle;
+        display: inline-block; }
+    .footer__item a {
+      color: white; }
+    .footer__item .footer-content {
+      margin-top: 1rem; }
+    .footer__item .footer-header {
+      color: var(--color-primary);
+      font-size: 1.5rem;
+      font-family: 'FredokaOne';
+      letter-spacing: .15rem;
+      text-align: left; }
+    .footer__item .footer-content {
+      color: white;
+      text-align: left; }
+    .footer__item .footer-grid {
+      margin: 0 auto; }
+
+.brand .white {
+  color: white; }
+.brand .secondary {
+  color: var(--color-primary); }
+
+.btn {
+  background-color: white; }
+  .btn-outline {
+    background: transparent;
+    border: .15rem solid white;
+    color: white; }
+  .btn-full {
+    width: 100%; }
+  .btn img {
+    width: 1rem; }
+
+/*# sourceMappingURL=cms.css.map */

@@ -1,0 +1,39 @@
+{% if view == 'show' %}
+    {% if value|length > 0 %}
+        <ul>
+            {% for element in value %}
+                <li>
+                    {% if field_options.path %}
+                        <img src="{{ field_options.path }}/{{ element.image }}">
+                    {% else %}
+                        {{ element.image }}
+                    {% endif %}
+                    <ul>
+                        <li>
+                            {{'sort' |trans }}: {{ element.sort }}
+                        </li>
+                        <li>
+                            {{'enabled' |trans }}: {{ element.enabled }}
+                        </li>
+                        <li>
+                            {{'name' |trans }}: {{ element.name }}
+                        </li>
+                        <li>
+                            {{'alt' |trans }}: {{ element.alt }}
+                        </li>
+                        {#                        <li>#}
+                        {#                            {{'updatedDate' |trans }}: {{ element.updatedDate }}#}
+                        {#                        </li>#}
+                        {#                        <li>#}
+                        {#                            {{'createdDate' |trans }}: {{ element.createdDate }}#}
+                        {#                        </li>#}
+                    </ul>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <div class="empty collection-empty">
+            {{ include(entity_config.templates.label_empty) }}
+        </div>
+    {% endif %}
+{% endif %}

@@ -1,0 +1,31 @@
+easy_admin:
+  site_name: '<img class="header-logo-image"  <span class="header-logo-text" >%env(APP_NAME)%</span>'
+  list:
+    actions:
+      - { name: 'show', icon: 'search', label: actions.show }
+      - { name: 'edit', icon: 'pencil', label: actions.edit }
+      - { name: 'delete', icon: 'trash', label: actions.delete }
+      - { name: 'new', icon: 'plus-circle', label: actions.new }
+      - { name: 'search', label: actions.search }
+  show:
+    actions:
+      - { name: 'edit', icon: 'pencil', label: actions.edit }
+      - { name: 'delete', icon: 'trash', label: actions.delete }
+  edit:
+    actions:
+      #            - { name: 'save', icon: 'save', label: actions.save }
+      - { name: 'delete', icon: 'trash', label: actions.delete }
+
+  formats:
+    datetime: 'd/m/Y H:i:s'
+  design:
+    brand_color: '#0095AE'
+    assets:
+      js:
+        - 'bundles/easyadmin/bootstrap-all.js'
+
+      css:
+        - 'bundles/easyadmin/bootstrap-all.css'
+        - 'assets/css/general.css'
+imports:
+  - { resource: easyadmin/*.yaml }

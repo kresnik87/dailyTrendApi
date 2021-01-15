@@ -1,0 +1,13 @@
+@import './../../bundles/essedieasycommerce/assets/scss/variables.scss';
+// overwrite $base colors
+$colors_base: (
+    primary: #0095AE,
+    secondary: #050100,
+    tertiary: #ffffff,
+    success: #10dc60,
+    warning: #ffce00,
+    error: #ffce00,
+    dark: #222428,
+    medium: #989aa2,
+    light: #f4f5f8
+);

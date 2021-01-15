@@ -1,0 +1,135 @@
+{% extends '@EasyAdmin/default/layout.html.twig' %}
+{% set _content_title = 'Admin dashboard' %}
+{% block page_title %}
+    {{ _content_title }}
+{% endblock %}
+
+{% block main %}
+    <div class="dash">
+        <div class="dash-capa pri">
+            <div class="dash-capa-wlcm"> 
+                <div class="photo" style="background-image: url('../images/user/{{ user_image }}')">
+                </div>
+                <div class="acc">
+                    <h4 class="title">¡{{'welcome' |trans}} {{user_name}}!</h4>
+                    <span>{{ user_role[0]|trans }}</span><br>
+                    <span><a href="/admin/?entity=User&action=show&id={{ user_id }}" target="_blank">{{'account_config' |trans}}</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dash-appInfo">
+        <div class='inv'>
+            <span><b>{{'version_download' |trans}}</b></span>
+            <span>{{'version_description' |trans|raw}}</span>    
+        </div>
+        <div class='app'>
+            <span>{{'download_from' |trans}}:</span>
+            <a href="https://play.google.com/apps/testing/com.essedi.blatgo" target="_blank" class="gp">Google Play</a>
+            <a href="" target="_blank" class="as">App Store</a>
+        </div>
+    </div>
+    <div class="dash no-height f">
+        <div class="dash-capa menor">
+            <div class="dash-capa-header">
+                <h5>{{'most_sold_products' |trans}}</h5>
+            </div>
+            <div class="dash-capa-mostSoldProds">
+                {% for prod in mostSoldProds %}
+                    <a href="/admin/?entity=Product&action=show&id={{ prod.id }}" target="_blank">
+                        <div class="prod">
+                            <div class="imgProd">
+                                <img src="{{ env('APP_IMAGE_PRODUCT') }}/{{ prod.image }}" alt="product.image">
+                            </div>
+                            <div class="infoProd">
+                                {#<div class="data">
+                                    <div class="dataTitle">
+                                        <h5>{{ 'name'|trans }}</h5>
+                                    </div>
+                                    <div class="dataProd">
+                                        {{ prod.name }}
+                                    </div>
+                                </div>
+                                <div class="data">
+                                    <div class="dataTitle">
+                                        <h5>{{ 'title'|trans }}</h5>
+                                    </div>
+                                    <div class="dataProd">
+                                        {{ prod.title }}
+                                    </div>
+                                </div>#}
+                                <p>{{ prod.name }}</p>
+                                <p>{{ prod.title }}</p>
+                            </div>
+                            <div class="seeMore">
+                                <img src="/assets/img/fa-search.png" alt=""/>
+                            </div>
+                        </div>
+                    </a>
+                {% endfor %}
+                <span style="font-weight:bold;"><a href="/admin/statistics/rankings?name=most_sold_products" target="_blank" class="orange">{{'see_more' |trans}}</a></span>
+            </div>
+        </div>
+        <div class="dash-capa mayor">
+            <div class="vertical">
+                <div class='t'>
+                    <div class="dash-capa-header">
+                        <h5>{{'most_sold_categories' |trans}}</h5>
+                    </div>
+                    <div class="dash-capa-cont">
+                        <table>
+                            <tr>
+                                <th class="table-left">{{'categories' |trans}}</th>
+                                <th class="table-right">{{ 'menu.soldProducts'|trans }}</th>
+                            </tr>
+                            {% for cat in mostSoldCats %}
+                                <tr class="heighter">
+                                    <td class="table-left"><a href="/admin/?entity=Category&action=show&id={{ cat.id }}" target="_blank">{{ cat.name }}</a></td>
+                                    <td class="table-right">{{ cat.sales }}</td>
+                                </tr>
+                            {% endfor %}
+                            <tr>
+                                <td class="table-center b" colspan='2'><a href="/admin/statistics/rankings?name=most_sold_categories" target="_blank" class="orange">{{'see_more' |trans}}</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="dash-capa-marginv"></div>
+                <div class='t'>
+                    <div class="dash-capa-header">
+                        <h5>{{'customer_types' |trans}}</h5>
+                    </div>
+                    <div class="dash-capa-cont">
+                        {% set agesInterval = ['18-24','25-34','35-44','+45'] %}
+                        {% set i = 0 %}
+                        <table>
+                            <tr>
+                                <th class="table-left">{{'age' |trans}}</th>
+                                <th class="table-right">{{ 'users'|trans }}</th>
+                            </tr>
+                            {% for user in usersPerAge %}
+                                <tr class="heighter">
+                                    {#<td class="table-left">{{ agesInterval[i] }}{% set i = i + 1 %}</td>#}
+                                    <td class="table-left">{% if user.year != null %}{{ user.year }}{% else %}{{ 'not_defined'|trans }}{% endif %}</td>
+                                    <td class="table-right">{{ user.users }}</td>
+                                </tr>
+                            {% endfor %}
+                            <tr>
+                                <td class="table-center b" colspan='2'><a href="/admin/statistics/rankings?name=users_per_age" target="_blank" class="orange">{{'see_more' |trans}}</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style> 
+        .content{
+            background-color: #e3e7ed!important;
+        }
+        .content-header .content-footer{
+            display:none!important;
+        }
+    </style>
+{% endblock %}
+

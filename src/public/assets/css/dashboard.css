@@ -1,0 +1,15 @@
+.dash {
+  background-color: #e3e7ed;
+  width: 100%;
+  min-height: cacl(90vh);
+  display: block;
+  justify-content: space-between;
+  align-content: space-between;
+  margin-bottom: 2.3vh;
+  padding: 1rem 1.5rem; }
+  .dash__panel {
+    height: inherit;
+    background-color: white;
+    padding: 1rem 1.5rem; }
+
+/*# sourceMappingURL=dashboard.css.map */

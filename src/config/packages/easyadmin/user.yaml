@@ -1,0 +1,90 @@
+easy_admin:
+    entities:    
+        User:
+            disabled_actions: ['delete']
+            class: App\Entity\User
+            label: menu.users
+            templates:
+                show: 'easy_admin/custom_show_template.html.twig'
+                edit: 'easy_admin/users_form.html.twig'
+                new: 'easy_admin/users_form.html.twig'
+            list:
+                title: menu.users
+                fields:
+                    - { property: 'id', label: 'id' }
+                    - { property: 'name', label: 'name'}
+                    - { property: 'surnames', label: 'surnames'} 
+                    - { property: 'email', label: 'email'}
+                    - { property: 'enabled', label: 'enabled',type: 'toggle'}                    
+                    - { property: 'roles', label: 'roles', template: 'easy_admin/translate_collection.html.twig'}
+                    - { property: 'lastLogin', label: 'lastLogin', template: 'easy_admin/datetime.html.twig'}
+                    - { property: 'updatedDate', label: 'updatedDate', template: 'easy_admin/datetime.html.twig'}
+                    - { property: 'createdDate', label: 'createdDate', template: 'easy_admin/datetime.html.twig'}
+                    
+            show:
+                title: menu.user
+                fields:
+                    - { property: 'id', label: 'id' }
+                    - { property: 'username', label: 'username' }
+                    - { property: 'name', label: 'name'}
+                    - { property: 'surnames', label: 'surnames'}    
+                    - { property: 'email', label: 'email'} 
+                    - { property: 'phone', label: 'phone'} 
+                    - { property: 'devices', label: 'devices'}
+                    - { property: 'birthDate', label: 'birthDate'}                                        
+                    - { property: 'enabled', label: 'enabled'}
+                    - { property: 'image', label: 'image', type: 'image', base_path: '%env(APP_IMAGE_USER)%' }                                        
+                    - { property: 'roles', label: 'roles', template: 'easy_admin/translate_collection.html.twig'}
+                    - { property: 'updatedDate', label: 'updatedDate'}
+                    - { property: 'createdDate', label: 'createdDate'}
+                    - { property: 'lastLogin', label: 'lastLogin'}   
+            
+            new:
+                title: menu.user
+                fields:
+                    - { type: 'group', columns: 6, label: '' }
+                    - { property: 'username', label: 'username' }
+                    - { property: 'plainPassword', label: 'password', type: 'password', type_options: { required: false }}
+                    - { property: 'name', label: 'name' }
+                    - { property: 'surnames', label: 'surnames'}
+                    - { property: 'email', label: 'email'}
+                    - { property: 'phone', label: 'phone'}
+                    - { type: 'group', columns: 6, label: '' }
+                    - { property: 'enabled', label: 'enabled'}
+                    -   property: 'roles'
+                        label: 'roles' 
+                        css_class: 'role_super_admin'
+                        type: choice
+                        type_options:
+                            multiple: true
+                            choices: 
+                                !php/const App\Entity\User::ROLE_USER  : !php/const App\Entity\User::ROLE_USER
+                                !php/const App\Entity\User::ROLE_ADMIN  : !php/const App\Entity\User::ROLE_ADMIN
+
+
+            edit:
+                title: menu.user
+                fields:
+                    - { type: 'group', columns: 6, label: '' }
+                    - { property: 'username', label: 'username' }
+                    - { property: 'plainPassword', label: 'password', type: 'password', type_options: { required: false }, role: ROLE_SUPER_ADMIN}
+                    - { property: 'name', label: 'name' }
+                    - { property: 'surnames', label: 'surnames'}
+                    - { property: 'email', label: 'email'}
+                    - { property: 'phone', label: 'phone'}
+                    - { type: 'group', columns: 6, label: '' }
+                    - { property: 'enabled', label: 'enabled'}
+                    -   property: 'roles'
+                        label: 'roles' 
+                        css_class: 'role_super_admin'
+                        type: choice
+                        role: ROLE_SUPER_ADMIN
+                        type_options:
+                            multiple: true
+                            choices: 
+                                !php/const App\Entity\User::ROLE_USER  : !php/const App\Entity\User::ROLE_USER
+                                !php/const App\Entity\User::ROLE_ADMIN  : !php/const App\Entity\User::ROLE_ADMIN
+                                !php/const App\Entity\User::ROLE_SUPER_ADMIN : !php/const App\Entity\User::ROLE_SUPER_ADMIN
+
+
+
