@@ -1,0 +1,140 @@
+{% block header %}
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+        <title>{% block page_title %}{{app_name}}{% endblock %}</title>
+
+        {% block head_stylesheets %}
+            <link rel="stylesheet" href="{{ asset('assets/css/general.css') }}">
+        {% endblock %}
+
+        {% block head_favicon %}
+            {% set favicon = easyadmin_config('design.assets.favicon') %}
+            <link rel="icon" type="{{ favicon.mime_type }}" href="{{ asset(favicon.path) }}" />
+        {% endblock %}
+
+        {% block head_javascript %}
+            <script src="{{ asset('assets/js/general.js') }}"></script>
+        {% endblock head_javascript %}
+
+    </head>
+    <style>
+        body
+        {
+            margin: 0px;
+            background: {{app_color}};
+        }
+        .card
+        {
+            padding: 3rem;
+            height: fit-content;
+            margin: auto;
+            background: white;
+            width:24em;
+            border-radius:1rem;
+            margin-top: 150px;
+        }
+        .fos_user_resetting_reset, .fos_user_user_show
+        {
+            color: black;
+        }
+        .fos_user_user_show p
+        {
+            {#            display: none;#}
+        }
+        {#   .fos_user_user_show
+           {
+               content: 'La contraseña se ha cambiado con éxito, ya puedes iniciar sesión';
+               font-size: 1.1rem;
+           }#}
+        #fos_user_resetting_form
+        {
+            margin-bottom: 1rem;
+        }
+        label[for=remember_me]
+        {
+            font-size: 1.1em;
+            text-align: center;
+            margin-top: 1rem;
+        }
+        label.required, label[for=username], label[for=password]
+        {
+            font-size: 1.1em;
+            text-align: left;
+            display: block;
+            margin-top: .5rem;
+
+        }
+        #fos_user_resetting_form_plainPassword_second, #fos_user_resetting_form_plainPassword_first, #username, #password
+        {
+            padding: 0px;
+            margin: 0 auto;
+            font-size: .8em;
+            line-height: 2em;
+            font-family: 'Averta-Regular';
+            border: 1px solid #CFD4E5;
+            margin-top: .2rem;
+            margin-bottom: .6rem;
+            width: calc(100%);
+        }
+        input[type=text]
+        {
+            width: auto;
+        }
+        .btn
+        {
+            align-items: flex-start;
+            text-align: center;
+            cursor: default;
+            color: buttontext;
+            background-color: buttonface;
+            box-sizing: border-box;
+            padding: 2px 6px 3px;
+            border-width: 2px;
+            border-style: outset;
+            border-color: buttonface;
+            border-image: initial;
+        }
+        input[type=submit], .btn
+        {
+            font-size: 1.1em;
+            cursor: pointer;
+            font-weight: bold;
+            display: inherit;
+            border-radius: 0.3rem;
+            text-decoration: none;
+            margin: 0 auto;
+        }
+        .errors
+        {
+            height: 1.8rem;
+            font-size: 1rem;
+            padding: .6rem;
+            color:red;
+            font-weight: bold;
+        }
+        .version
+        {
+            font-style: italic;
+            font-size: .8rem;
+            width: 100%;
+            text-align: right;
+            margin-bottom: -2rem; 
+        }
+    </style>
+    <div style="width: 100%; background-color: white; text-align: center;">
+        <a href="{{ base_url }}">
+            <img src="{{base_url}}/assets/img/banner.jpg" alt="{{app_name}}" title="{{app_name}}" style="width: 24em; height: auto;"/>
+        </a>
+    </div>
+{% endblock header %}
+
+{% block fos_user_content %}
+    {% include "@FOSUser/ChangePassword/change_password_content.html.twig" %}
+{% endblock fos_user_content %}
+
+{% block body %}
+
+{% endblock body %}

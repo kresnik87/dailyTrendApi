@@ -1,0 +1,23 @@
+resources:
+    App\Entity\Feed:
+        attributes:
+            normalization_context:
+                groups: ['feed-read']
+            denormalization_context:
+                groups: ['feed-write']
+        collectionOperations:
+            get:
+                method: 'GET'
+            post:
+                method: 'POST'
+
+        itemOperations:
+            get:
+                method: 'GET'
+
+            put:
+                method: 'PUT'
+
+            delete:
+                method: 'DELETE'
+

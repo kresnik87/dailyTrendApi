@@ -1,0 +1,10 @@
+vich_uploader:
+    db_driver: orm
+    mappings:
+        feedImage:
+            uri_prefix: '%env(APP_IMAGE_FEED)%'
+            upload_destination: '%kernel.project_dir%/public/%env(APP_IMAGE_FEED)%'
+            namer: Vich\UploaderBundle\Naming\UniqidNamer
+            inject_on_load: false
+            delete_on_update: true
+            delete_on_remove: true

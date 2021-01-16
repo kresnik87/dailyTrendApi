@@ -1,0 +1,53 @@
+easy_admin:
+    entities:    
+        Feed:
+            class: App\Entity\Feed
+            label: menu.feed
+            list:
+                title: menu.feed
+                fields:
+                    - { property: 'id', label: 'id' }
+                    - { property: 'title', label: 'title'}
+                    - { property: 'created', label: 'createdDate', template: 'easy_admin/datetime.html.twig'}
+                    - { property: 'updated', label: 'updatedDate', template: 'easy_admin/datetime.html.twig'}
+                    
+            show:
+                title: menu.feed
+                fields:
+                    - { property: 'id', label: 'id' }
+                    - { property: 'title', label: 'title' }
+                    - { property: 'body', label: 'body'}
+                    - { property: 'source', label: 'source'}
+                    - { property: 'image', label: 'image', type: 'image', base_path: '%env(APP_IMAGE_FEED)%' }
+                    - { property: 'createdDate', label: 'createdDate',template: 'easy_admin/datetime.html.twig'}
+                    - { property: 'updatedDate', label: 'updatedDate',template: 'easy_admin/datetime.html.twig'}
+                    - { property: 'publisher', label: 'publisher'}
+            
+            new:
+                title: menu.feed
+                fields:
+                    - { type: 'group', columns: 6, label: '' }
+                    - { property: 'title', label: 'title' }
+                    - { property: 'source', label: 'source' }
+                    - { property: 'image', label: 'image'}
+                    - { property: 'imageFile',type: 'vich_image'}
+                    - { property: 'publisher', label: 'publisher'}
+                    - { type: 'group', columns: 6, label: ''}
+                    - { property: 'body', label: 'body', type: 'fos_ckeditor' }
+
+
+
+            edit:
+                title: menu.feed
+                fields:
+                    - { type: 'group', columns: 6, label: '' }
+                    - { property: 'title', label: 'title' }
+                    - { property: 'source', label: 'source' }
+                    - { property: 'image', label: 'image' }
+                    - { property: 'imageFile',type: 'vich_image'}
+                    - { property: 'publisher', label: 'publisher' }
+                    - { type: 'group', columns: 6, label: '' }
+                    - { property: 'body', label: 'body', type: 'fos_ckeditor' }
+
+
+

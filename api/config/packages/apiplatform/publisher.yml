@@ -1,0 +1,23 @@
+resources:
+    App\Entity\Publisher:
+        attributes:
+            normalization_context:
+                groups: ['publisher-read']
+            denormalization_context:
+                groups: ['publisher-write']
+        collectionOperations:
+            get:
+                method: 'GET'
+            post:
+                method: 'POST'
+
+        itemOperations:
+            get:
+                method: 'GET'
+
+            put:
+                method: 'PUT'
+
+            delete:
+                method: 'DELETE'
+
