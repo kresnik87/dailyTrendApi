@@ -1,6 +1,0 @@
-#register
-registerBussines:
-    path: '/register/bussines'
-    methods: ['POST']
-    defaults:
-        _controller: App\Controller\BussinesController::registerAction
