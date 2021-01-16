@@ -7,6 +7,9 @@ RUN chmod +x /usr/bin/wait-for-it
 RUN apk --update --no-cache add git
 
 RUN docker-php-ext-install pdo_mysql
+RUN apk add --no-cache zip libzip-dev
+RUN docker-php-ext-configure zip
+RUN docker-php-ext-install zip
 
 COPY --from=composer /usr/bin/composer /usr/bin/composer
 

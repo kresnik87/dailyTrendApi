@@ -1,0 +1,8 @@
+easy_admin:
+    design: 
+        menu:
+            - { entity: User, icon: 'user' }
+            - { entity: Feed, icon: 'newspaper' }
+            - { entity: Publisher, icon: 'archive' }
+
+

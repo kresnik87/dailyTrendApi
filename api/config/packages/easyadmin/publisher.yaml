@@ -1,0 +1,36 @@
+easy_admin:
+    entities:    
+        Publisher:
+            class: App\Entity\Publisher
+            label: menu.publisher
+            list:
+                title: menu.publisher
+                fields:
+                    - { property: 'id', label: 'id' }
+                    - { property: 'name', label: 'title'}
+                    - { property: 'url', label: 'url'}
+
+            show:
+                title: menu.publisher
+                fields:
+                    - { property: 'id', label: 'id' }
+                    - { property: 'name', label: 'name' }
+                    - { property: 'url', label: 'url'}
+
+            
+            new:
+                title: menu.publisher
+                fields:
+                    - { type: 'group', columns: 6, label: '' }
+                    - { property: 'name', label: 'name' }
+                    - { property: 'url', label: 'url'}
+
+
+
+            edit:
+                title: menu.publisher
+                fields:
+                    - { type: 'group', columns: 6, label: '' }
+                    - { property: 'name', label: 'name' }
+                    - { property: 'url', label: 'url'}
+
