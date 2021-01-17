@@ -25,6 +25,10 @@ resources:
                 access_control: is_granted('ROLE_USER')
             
         itemOperations:
+            web_crap:
+                method: 'GET'
+                router_name: 'web_crap_get'
+
             me:
                 method: 'GET'
                 route_name: 'api_me'

@@ -1,0 +1,4 @@
+0 */6 * * * /usr/local/bin/php /var/www/bin/console  app:generate:feeds  >> var/log/cron/cron.log 2>&1
+
+
+

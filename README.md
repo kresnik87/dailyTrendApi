@@ -29,3 +29,9 @@ docker-compose run php-fpm sh
  ```
 php bin/console fos:user:create adminuser --super-admin 
  ``` 
+
+### Execute Generator Feed Command
+1- Inside a container copy and run this commmand
+```
+php bin/console app:generate:feed
+ ``` 
