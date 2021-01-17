@@ -54,8 +54,9 @@ class Feed
     private $created;
 
     /**
-     * @ORM\OneToOne(targetEntity="App\Entity\Publisher", cascade={"persist", "remove"})
-     * @Groups({"feed-read","feed-write"})
+     * @ORM\ManyToOne (targetEntity="App\Entity\Publisher", inversedBy="feeds")
+     * @ORM\JoinColumn(nullable=true)
+     * @Groups({"feed-read"})
      */
     private $publisher;
 
