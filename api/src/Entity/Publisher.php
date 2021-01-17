@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use ApiPlatform\Core\Annotation\ApiResource;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Serializer\Annotation\Groups;
 
@@ -12,6 +14,7 @@ use Symfony\Component\Serializer\Annotation\Groups;
  */
 class Publisher
 {
+    const MIN_FEED_VALUE= 5;
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
@@ -32,6 +35,16 @@ class Publisher
      */
     private $url;
 
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Feed", mappedBy="publiser")
+     */
+    private $feeds;
+
+
+    public function __construct()
+    {
+        $this->feeds = new ArrayCollection();
+    }
 
     public function __toString()
     {
@@ -63,6 +76,35 @@ class Publisher
     public function setUrl(?string $url): self
     {
         $this->url = $url;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Feed[]
+     */
+    public function getFeeds(): Collection
+    {
+        return $this->feeds;
+    }
+
+    public function addFeeds(Feed $feed): self
+    {
+        if (!$this->feeds->contains($feed)) {
+            $this->feeds[] = $feed;
+
+        }
+
+        return $this;
+    }
+
+    public function removeFeed(Feed $feed): self
+    {
+        if ($this->feeds->contains($feed)) {
+            $this->feeds->removeElement($feed);
+            // set the owning side to null (unless already changed)
+
+        }
 
         return $this;
     }

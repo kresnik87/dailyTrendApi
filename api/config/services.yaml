@@ -35,8 +35,14 @@ services:
             - '@fos_user.mailer.twig_swift'
             - ''
 
-    App\Controller\BussinesController:
+    feed.filters:
+        parent: 'api_platform.doctrine.orm.search_filter'
+        arguments: [ { publisher.id: "exact", created: "partial" } ]
+        tags: [ 'api_platform.filter' ]
+        autowire: false
+        autoconfigure: false
+        public: false
+
+    App\Command\GenerateFeedCommand:
         arguments:
-            - '@Vich\UploaderBundle\Storage\StorageInterface'
-            - '@fos_user.util.token_generator'
-            - '@fos_user.mailer.twig_swift'
+            - '@doctrine.orm.entity_manager'
