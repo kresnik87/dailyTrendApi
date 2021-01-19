@@ -19,7 +19,7 @@ class Publisher
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
-     * @Groups({"feed-read","publisher-read"})
+     * @Groups({"feed-read","publisher-read","feed-write"})
      */
     private $id;
 

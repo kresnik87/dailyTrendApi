@@ -37,7 +37,7 @@ class Feed
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
-     * @Groups({"feed-read","feed-write"})
+     * @Groups({"feed-read"})
      */
     private $image;
 
@@ -56,7 +56,7 @@ class Feed
     /**
      * @ORM\ManyToOne (targetEntity="App\Entity\Publisher", inversedBy="feeds")
      * @ORM\JoinColumn(nullable=true)
-     * @Groups({"feed-read"})
+     * @Groups({"feed-read","feed-write"})
      */
     private $publisher;
 
